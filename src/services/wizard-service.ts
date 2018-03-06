@@ -125,6 +125,7 @@ export class WizardService implements IService {
     }
 
     prepareParams = (item: any) => {
+      console.log(item);
         let result = {
             title: item.title,
             data: this.getDataForTheme(item),

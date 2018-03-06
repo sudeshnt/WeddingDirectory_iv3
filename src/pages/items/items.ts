@@ -15,7 +15,10 @@ import { WizardService } from '../../services/wizard-service';
 @Component({
   templateUrl: 'items.html',
   providers: [
-    MailChimpService,WizardService,HttpService, ValidationService
+    MailChimpService,
+    WizardService,
+    HttpService,
+    ValidationService
   ]
 })
 

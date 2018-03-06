@@ -6,7 +6,8 @@ import { WizardService } from "../../services/wizard-service";
 
 @IonicPage()
 @Component({
-  templateUrl: 'item-details-wizard.html'
+  templateUrl: 'item-details-wizard.html',
+  providers: [WizardService]
 })
 export class ItemDetailsPageWizard {
 
@@ -16,10 +17,8 @@ export class ItemDetailsPageWizard {
 
   constructor(public navCtrl: NavController, navParams: NavParams , private wizardService: WizardService) {
     // If we navigated to this page, we will have an item available as a nav param
-    this.page = "ItemDetailsPageWizard";
-    this.service = wizardService;
-    // this.page = navParams.get('page');
-    // this.service = navParams.get('service');
+    this.page = navParams.get('page');
+    this.service = navParams.get('service');
     if (this.service) {
       this.params = this.service.prepareParams(this.page, navCtrl);
       this.service.load(this.page).subscribe(snapshot => {
