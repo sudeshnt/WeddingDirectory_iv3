@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title text-capitalize>{{title}}</ion-title>
+        <!-- <a header-button ion-button icon-left outline button-clear-outline
+    href="https://codecanyon.net/item/ionic-2-ui-themetemplate-app-material-design-yellow-dark/19375225?ref=CreativeForm">
+      BUY NOW
+    </a> -->
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-list no-padding no-margin no-lines>
+        <button ion-item item-title paddinge-left border *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+    </button>
+    </ion-list>
+</ion-content>
